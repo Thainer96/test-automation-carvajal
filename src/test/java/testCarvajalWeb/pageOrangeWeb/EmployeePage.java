@@ -25,6 +25,14 @@ public class EmployeePage implements LocatorProviderWeb {
     public static final String INPUT_MIDDLE_NAME = "inputMiddleName";
     public static final String ADD_BUTTON_FILE = "addButtonFile";
     public static final String UPLOAD_BUTTON_FILE = "uploadButtonFile";
+    public static final String SAVE_BUTTON_MODAL = "saveButtonModal";
+    public static final String CHECK_PDF = "checkPdf";
+    public static final String MORE_OPTIONS = "moreOptions";
+    public static final String DELETED_OPTIONS = "deletedOptions";
+    public static final String YES_DELETED_BUTTON_MODAL = "yesDeletedButtonModal";
+
+
+
 
     private final Map<String, By> locatorEmployee = new HashMap<>();
 
@@ -49,7 +57,13 @@ public class EmployeePage implements LocatorProviderWeb {
 
         locatorEmployee.put(ADD_BUTTON_FILE, By.xpath("//a[text()='Add']"));
         locatorEmployee.put(UPLOAD_BUTTON_FILE, By.xpath("//div[@id='modal-holder']//input"));
-        //div[@id='modal-holder']//button[@id='modal-save-button']
+        locatorEmployee.put(SAVE_BUTTON_MODAL, By.xpath("//div[@id='modal-holder']//button[@id='modal-save-button']"));
+        locatorEmployee.put(CHECK_PDF, By.xpath("//label[@for='checkbox_attachments_1']"));
+        locatorEmployee.put(MORE_OPTIONS, By.xpath("//i[text()='more_horiz']"));
+        locatorEmployee.put(DELETED_OPTIONS, By.xpath("//a[text()='Delete Selected']"));
+        locatorEmployee.put(YES_DELETED_BUTTON_MODAL, By.xpath("//div[@id='modal-holder']//button[@id='save-button']"));
+
+
     }
 
     @Override

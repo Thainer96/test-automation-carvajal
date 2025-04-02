@@ -92,8 +92,8 @@ public class EmployeeSteps {
 
     @When("realice el cargue de un archivo pdf")
     public void realiceElCargueDeUnArchivoPdf() {
-        //baseTest.clickElement(employeePage.getLocator(EmployeePage.UPLOAD_BUTTON_FILE));
         baseTest.uploadFile(employeePage.getLocator(EmployeePage.UPLOAD_BUTTON_FILE));
+        baseTest.clickElement(employeePage.getLocator(EmployeePage.SAVE_BUTTON_MODAL));
     }
 
     @Then("se visualiza cargado correctamente")
@@ -103,5 +103,10 @@ public class EmployeeSteps {
 
     @And("se puede eliminar el archivo cargado")
     public void sePuedeEliminarElArchivoCargado() {
+        baseTest.clickElement(employeePage.getLocator(EmployeePage.CHECK_PDF));
+        baseTest.clickElement(employeePage.getLocator(EmployeePage.MORE_OPTIONS));
+        baseTest.clickElement(employeePage.getLocator(EmployeePage.DELETED_OPTIONS));
+        baseTest.clickElement(employeePage.getLocator(EmployeePage.YES_DELETED_BUTTON_MODAL));
+
     }
 }

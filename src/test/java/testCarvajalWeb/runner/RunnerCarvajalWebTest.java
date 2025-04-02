@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = {"testCarvajalWeb.stepDefinitions","testCarvajalWeb.hooks"},
-        tags = "@Employee",
+        tags = "@cargarEliminarArchivo",
         plugin= {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class RunnerCarvajalWebTest {
