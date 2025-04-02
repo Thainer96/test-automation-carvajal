@@ -65,7 +65,9 @@ se realizo la automatización de los siguientes casos en lenguaje Gherkin:
 
 ## Ejecución de las Pruebas
 
-### Pruebas API
+### Pruebas WEB
+para cambiar el navegador ingresar al archivo "test.properties"
+y en la propiedad "BROWSER" ingresar Firefox BROWSER=Firefox
 
 ```bash
 mvn test # Maven
